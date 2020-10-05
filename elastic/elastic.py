@@ -1,3 +1,4 @@
+# script for testing locally
 from elasticsearch import Elasticsearch
 from bert_serving.client import BertClient
 from elasticsearch.exceptions import ConnectionError, NotFoundError
@@ -29,23 +30,23 @@ script_query = {
             {
                 "script_score": {
                     "script": {
-                        "source": "cosineSimilarity(params.query_vector, 'abstract_vector') + 1.0",
+                        "source": "cosineSimilarity(params.query_vector, 'topic_description_vector') + 1.0",
                         "params": {
                             "query_vector": query_vector
                         }
                     }
                 }
-            }, 
-            {
-                "script_score": {
-                    "script": {
-                        "source": "cosineSimilarity(params.query_vector, 'abstract_vector') + 1.0",
-                        "params": {
-                            "query_vector": query_vector2
-                        }
-                    }
-                }
             }
+            # {
+            #     "script_score": {
+            #         "script": {
+            #             "source": "cosineSimilarity(params.query_vector, 'topic_description_vector') + 1.0",
+            #             "params": {
+            #                 "query_vector": query_vector2
+            #             }
+            #         }
+            #     }
+            # }
         ],
         "score_mode": "max",
         "boost_mode": "multiply",

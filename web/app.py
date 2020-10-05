@@ -25,7 +25,7 @@ def analyzer():
         "script_score": {
             "query": {"match_all": {}},
             "script": {
-                "source":  "cosineSimilarity(params.query_vector, 'abstract_vector') + 1.0",
+                "source":  "cosineSimilarity(params.query_vector, 'topic_description_vector') + 1.0",
                 "params": {"query_vector": query_vector}
             }
         }
@@ -36,7 +36,7 @@ def analyzer():
         body={
             "size": SEARCH_SIZE,
             "query": script_query,
-            "_source": {"includes": ["title", "abstract"]}
+            "_source": {"includes": ["title", "topic_description"]}
         }
     )
     print(query)

@@ -1,0 +1,82 @@
+{
+  "settings" : {
+      "number_of_shards": 2,
+      "number_of_replicas": 1
+  },
+  "mappings": {
+          "properties": {
+            "allowed_participant_countries": {
+                "type": "text"
+            },
+            "allowed_participants": {
+                "type": "text"
+            },
+            "allowed_participants_age": {
+                "type": "long"
+            },
+            "area_of_activity": {
+                "type": "text"
+            },
+            "competition_results_date": {
+                "type": "date"
+            },
+            "country": {
+                "type": "text"
+            },
+            "topic_description": {
+                "type": "text"
+            },
+            "documents_submission_date_end": {
+                "type": "date"
+            },
+            "documents_submission_date_start": {
+                "type": "date"
+            },
+            "documents_submission_time_end": {
+                "type": "text"
+            },
+            "expected_impact": {
+                "type": "text"
+            },
+            "field_of_knoweledge": {
+                "type": "text"
+            },
+            "fund_name": {
+                "type": "text"
+            },
+            "id": {
+                "type": "text"
+            },
+            "is_scientific_degree_required": {
+                "type": "boolean"
+            },
+            "is_urgent": {
+                "type": "boolean"
+            },
+            "link": {
+                "type": "text"
+            },
+            "minimal_scientist_experience": {
+                "type": "text"
+            },
+            "name": {
+                "type": "text"
+            },
+            "program_budget": {
+                "type": "long"
+            },
+            "specific_objectives": {
+                "type": "text"
+            },
+            "project_budget": {
+                "type": "text"
+            },
+            "purpose": {
+                "type": "text"
+            },
+            "type": {
+                "type": "text"
+            },
+            "topic_description_vector": {"type":  "dense_vector", "dims":  768}
+          }}
+  }
