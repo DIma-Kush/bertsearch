@@ -16,7 +16,7 @@ def main(args):
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='Creating elasticsearch index.')
-    parser.add_argument('--index_file', default='elastic/mapping.json', help='Elasticsearch index file.')
+    parser.add_argument('--index_file', default='elastic/mappings/grants.json', help='Elasticsearch index file.')
     parser.add_argument('--index_name', default='grants', help='Elasticsearch index name.')
     args = parser.parse_args()
     main(args)
