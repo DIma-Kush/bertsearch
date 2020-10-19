@@ -4,6 +4,7 @@
       "number_of_replicas": 1
   },
   "mappings": {
+        "dynamic": true,
           "properties": {
             "allowed_participant_countries": {
                 "type": "text"
@@ -18,7 +19,9 @@
                 "type": "text"
             },
             "competition_results_date": {
-                "type": "date"
+                "type": "date",
+                "format": "dd.MM.yyyy",
+                "ignore_malformed": true
             },
             "country": {
                 "type": "text"
@@ -27,10 +30,14 @@
                 "type": "text"
             },
             "documents_submission_date_end": {
-                "type": "date"
+                "type": "date",
+                "format": "dd.MM.yyyy",
+                "ignore_malformed": true
             },
             "documents_submission_date_start": {
-                "type": "date"
+                "type": "date",
+                "format": "dd.MM.yyyy",
+                "ignore_malformed": true
             },
             "documents_submission_time_end": {
                 "type": "text"
@@ -63,7 +70,7 @@
                 "type": "text"
             },
             "program_budget": {
-                "type": "long"
+                "type": "text"
             },
             "specific_objectives": {
                 "type": "text"
@@ -77,6 +84,9 @@
             "type": {
                 "type": "text"
             },
-            "topic_description_vector": {"type":  "dense_vector", "dims":  768}
-          }}
-  }
+            "topic_description_vector": {
+                "type":  "dense_vector", "dims":  768
+            }
+        }
+    }
+}
