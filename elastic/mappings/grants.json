@@ -18,11 +18,6 @@
             "area_of_activity": {
                 "type": "text"
             },
-            "competition_results_date": {
-                "type": "date",
-                "format": "dd.MM.yyyy",
-                "ignore_malformed": true
-            },
             "country": {
                 "type": "text"
             },
@@ -30,14 +25,10 @@
                 "type": "text"
             },
             "documents_submission_date_end": {
-                "type": "date",
-                "format": "dd.MM.yyyy",
-                "ignore_malformed": true
+                "type": "date"
             },
             "documents_submission_date_start": {
-                "type": "date",
-                "format": "dd.MM.yyyy",
-                "ignore_malformed": true
+                "type": "date"
             },
             "documents_submission_time_end": {
                 "type": "text"
